@@ -84,8 +84,8 @@ WSGI_APPLICATION = 'Datatables.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        # Usa la URL de la base de datos proporcionada por Render
-        default='postgresql://datafime_user:bh2af8KFAAn9uALlhDpxQh1Yl4ommiTv@dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com:5432/datafime',
+        # Replace this value with your local database's connection string.
+        default='postgresql://postgres:postgres@localhost:5432/mysite',
         conn_max_age=600
     )
 }
