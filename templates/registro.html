@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block archivos_necesarios_inicio %}
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Registro de Usuario</h1>
+                </div>
+                <div class="card-body">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Nombre de usuario:</label>
+                            <input type="text" name="{{ form.username.name }}" id="{{ form.username.id_for_label }}"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Correo electrónico:</label>
+                            <input type="email" name="{{ form.email.name }}" id="{{ form.email.id_for_label }}"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Nombres:</label>
+                            <input type="text" name="{{ form.nombres.name }}" id="{{ form.nombres.id_for_label }}"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellidos:</label>
+                            <input type="text" name="{{ form.apellidos.name }}" id="{{ form.apellidos.id_for_label }}" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirmar Contraseña:</label>
+                            <input type="password" name="confirm_password" class="form-control">
+                        </div>
+                        {% if request.user.usuario_administrador %}
+                        <div class="mb-3">
+                            <label class="form-label">¿Quieres que este usuario sea administrador?</label><br>
+                            <input type="radio" id="admin_si" name="usuario_administrador" value="True">
+                            <label for="admin_si">Sí</label><br>
+                            
+                            <input type="radio" id="admin_no" name="usuario_administrador" value="False">
+                            <label for="admin_no">No</label><br>
+                        </div>
+                        {% endif %}
+                        <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

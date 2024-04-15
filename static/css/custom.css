@@ -1,0 +1,69 @@
+.btn-blue-rounded {
+    display: block; /* Cambiado a block para que ocupe todo el ancho */
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #007BFF; /* Azul amigable */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    border: none; /* Eliminado el borde para que sea más limpio */
+    cursor: pointer; /* Añadido cursor pointer para indicar clickeabilidad */
+}
+
+.btn-blue-rounded:hover {
+    background-color: #0056b3; /* Azul un poco más oscuro al pasar el cursor */
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+/* Redondeo de bordes para los campos de entrada */
+form input[type="text"],
+form input[type="number"],
+form select {
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    width: 100%; /* Ajuste para que los campos de entrada ocupen todo el ancho */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Cambio de color al enfocar los campos de entrada */
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+    border-color: #19A219;
+    outline: none;
+    box-shadow: 0 0 5px #19A219;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Ajustes para los campos y etiquetas */
+.form-label {
+    font-weight: bold;
+    display: block; /* Ajuste para que los labels ocupen todo el ancho */
+    margin-bottom: 10px; /* Espacio entre los labels y los campos de entrada */
+}
+
+/* Ajustes para el botón */
+.text-center {
+    margin-top: 20px;
+    text-align: center; /* Añadido text-align para centrar el texto */
+}
+
+.container-izquierda {
+    float: left;
+    width: 50%; /* Establecido un ancho para el contenedor */
+}
+

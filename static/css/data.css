@@ -1,0 +1,58 @@
+.btn-blue-rounded {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #19A219;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-blue-rounded:hover {
+    background-color: #16D816;
+}
+
+/* Botón verde */
+.btn-green-rounded {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #19A219; 
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-green-rounded:hover {
+    background-color: #16D816; 
+}
+
+/* Botón azul */
+.btn-blue-rounded {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-blue-rounded:hover {
+    background-color: #0056b3; 
+}
+
+
+.btn-red-rounded {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #FF0000; 
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-red-rounded:hover {
+    background-color: #CC0000; 
+}
