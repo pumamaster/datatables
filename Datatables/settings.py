@@ -84,8 +84,7 @@ WSGI_APPLICATION = 'Datatables.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgres://datafime_user:bh2af8KFAAn9uALlhDpxQh1Yl4ommiTv@dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com/datafime',
         conn_max_age=600
     )
 }
