@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 DEBUG = 'RENDER' not in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['datafime.onrender.com', 'dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -81,10 +81,14 @@ WSGI_APPLICATION = 'Datatables.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://datafime_user:bh2af8KFAAn9uALlhDpxQh1Yl4ommiTv@dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com/datafime',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'datafime',
+        'USER': 'datafime_user',
+        'PASSWORD': 'bh2af8KFAAn9uALlhDpxQh1Yl4ommiTv',
+        'HOST': 'dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
 }
 
 
