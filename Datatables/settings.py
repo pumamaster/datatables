@@ -22,7 +22,9 @@ DEBUG = False
 
 CORS_ORIGIN_WHITELIST = [
     'https://hermes-eight-sandy.vercel.app',
+    'https://hermes-kqhoa3d4z-hermesfimes-projects.vercel.app',
 ]
+
 
 ALLOWED_HOSTS = ['datafime.onrender.com', 'dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com','127.0.0.1']
 
@@ -50,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -57,8 +60,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'Datatables.urls'
 
