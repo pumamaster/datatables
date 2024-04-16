@@ -20,6 +20,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 DEBUG = False
 
+CORS_ORIGIN_WHITELIST = [
+    'https://hermes-eight-sandy.vercel.app',
+]
+
 ALLOWED_HOSTS = ['datafime.onrender.com', 'dpg-coeb4ca0si5c739dn210-a.oregon-postgres.render.com','127.0.0.1']
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
